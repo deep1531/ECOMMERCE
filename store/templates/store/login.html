@@ -1,0 +1,45 @@
+{% extends 'store/Main.html' %}
+{% load static %}
+{% block content %}
+<!doctype html>
+<html>
+  <head>
+   
+
+
+ <div class= "container mt-5 ">
+  <form class= "col-6 mx-auto card p-3 shadow-lg" method ="post" enctype="multipart/form-data">
+    
+    {% csrf_token %}
+      <h2>LoGiN paGe</h2>
+      <hr>
+      
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">UserName</label>
+    <input type="text" class="form-control" name = "username" id="exampleInputEmail1"  aria-describedby="emailHelp">
+   
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" name= "password" id="exampleInputPassword1">
+  </div>
+ 
+  <p>Don't have account / <a href= "/Register/">Register</a></p>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  
+
+ </div>
+
+
+
+
+
+  </body>
+
+
+
+
+</html>
+{% endblock content %}
